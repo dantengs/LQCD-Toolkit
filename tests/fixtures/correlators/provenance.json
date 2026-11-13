@@ -1,0 +1,27 @@
+{
+  "origin": "synthetic-format-fixtures",
+  "seed": 152347,
+  "files": [
+    {
+      "local_name": "two_point.bin",
+      "bytes": 75941,
+      "sha256": "119adedb9613e87ea3e99b29c9d3a635dee0d89d0d336101d7c5a6e7c8d15e25"
+    },
+    {
+      "local_name": "two_point.txt",
+      "bytes": 125390,
+      "sha256": "3aa67ec737646fc4e8f0128e600b8b6410cf1718e46a496fbb214717b0137f41"
+    },
+    {
+      "local_name": "three_point.bin",
+      "bytes": 17258,
+      "sha256": "3573a01c816f75abb7a321f1d6e735301acd584a12e72390a522905d53a4c3b6"
+    },
+    {
+      "local_name": "three_point.txt",
+      "bytes": 28420,
+      "sha256": "45c77ff0168dd378c2feaae26bfbebebb990aff6cd3e484204065e3586a52a3a"
+    }
+  ],
+  "purpose": "Parser/precision tests only; no physical ensemble, source or channel claim"
+}

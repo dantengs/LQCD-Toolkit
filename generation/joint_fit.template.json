@@ -1,0 +1,22 @@
+{
+  "version": "lqcd.joint-fit.v1",
+  "database": "REQUIRED/data.sqlite",
+  "selections": {
+    "initial": "initial.selection.json",
+    "final": "final.selection.json",
+    "three_point": "three_point.selection.json"
+  },
+  "spectral_assumption": "positive-diagonal-periodic",
+  "three_point_spectral_assumption": "forward-only",
+  "c3_time_mapping": "initial-forward",
+  "current_projection": {"phase": [1.0, 0.0], "scale": 1.0, "evidence": "REQUIRED: justify bare Euclidean-current phase and normalization"},
+  "alignment": "exact",
+  "configuration_order": [],
+  "bin_size": 1,
+  "svd_rcond": 1e-10,
+  "windows": {"initial": [5, 6, 7, 8, 9], "final": [5, 6, 7, 8, 9], "three_point": [4, 5, 6, 7, 8]},
+  "model_initial": {"states": 1, "initial_energies": [0.5], "initial_overlaps": [0.8], "energy_gap_bounds": [[0.01, 2.0]], "overlap_bounds": [[0.001, 10.0]]},
+  "model_final": {"states": 1, "initial_energies": [0.3], "initial_overlaps": [0.8], "energy_gap_bounds": [[0.01, 2.0]], "overlap_bounds": [[0.001, 10.0]]},
+  "matrix_initial": [[0.5]],
+  "matrix_bounds": [[[-10.0, 10.0]]]
+}

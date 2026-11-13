@@ -1,0 +1,25 @@
+{
+  "version": "lqcd.easy.v1",
+  "template": true,
+  "output": "../my-lqcd-run",
+  "ensemble": "",
+  "scientific_mode": "external-production-action",
+  "geometry": {"nt": 64, "nz": 32, "ny": 32, "nx": 32},
+  "quark_masses": {"c": "", "d": "", "s": ""},
+  "process": {
+    "initial_quark": "c",
+    "final_quark": "d",
+    "spectator_quark": "s",
+    "initial_operator": "g5",
+    "final_operator": "g5",
+    "current": "g4",
+    "momentum_initial": [0, 0, 0],
+    "momentum_final": [1, 0, 0],
+    "separation": 24
+  },
+  "sources": {"kind": "point", "positions": [[0, 0, 0, 0]]},
+  "configurations": [{"id": "2000", "gauge": ""}],
+  "backend": "../profiles/xqcd.template.json",
+  "max_memory_bytes": 1073741824,
+  "analysis": null
+}

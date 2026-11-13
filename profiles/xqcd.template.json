@@ -1,0 +1,15 @@
+{
+  "version": "lqcd.backend-profile.v1",
+  "template": true,
+  "profile": "xqcd.overlap-inverter-stdin.v1",
+  "argv": [],
+  "input_template": "../generation/xqcd_input.template",
+  "dependency_files": {},
+  "action_evidence": "",
+  "residual_pattern": "",
+  "residual_definition": "",
+  "residual_evidence": "",
+  "residual_tolerance": 1e-10,
+  "expected_residual_count": 12,
+  "timeout_seconds": 86400
+}

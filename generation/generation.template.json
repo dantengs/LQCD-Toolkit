@@ -1,0 +1,36 @@
+{
+  "version": "lqcd.generation.v1",
+  "template": true,
+  "stage": "full",
+  "writer_profile": "cpu-sequential-reference.v1",
+  "scientific_mode": "external-production-action",
+  "ensemble": "REQUIRED_ensemble",
+  "config_id": "REQUIRED_integer_configuration",
+  "source_id": "t0",
+  "geometry": {"nt": 64, "nz": 32, "ny": 32, "nx": 32},
+  "max_memory_bytes": 1073741824,
+  "source": {"kind": "point", "position": [0, 0, 0, 0]},
+  "masses": {"initial": "REQUIRED", "final": "REQUIRED", "spectator": "REQUIRED"},
+  "channel": {
+    "initial_operator": "g5",
+    "final_operator": "g5",
+    "current": "g4",
+    "momentum_initial": [0, 0, 0],
+    "momentum_final": [0, 0, 0],
+    "separation": 16
+  },
+  "gauge": "/REQUIRED/actual/gauge/file",
+  "backend": {
+    "profile": "xqcd.overlap-inverter-stdin.v1",
+    "argv": ["/REQUIRED/mpi/bin/mpirun", "-n", "1", "/REQUIRED/bin/overlap_inverter_cuda"],
+    "input_template": "/REQUIRED/completed/xqcd_input.template",
+    "action_evidence": "REQUIRED: executable build/hash and verified overlap-action parameters",
+    "dependency_files": {},
+    "residual_pattern": "REQUIRED_ONE_CAPTURE_FOR_EACH_SOLVER_RHS",
+    "residual_definition": "REQUIRED: actual logged norm and normalization, not eigenvector residuals",
+    "residual_evidence": "REQUIRED: executable/source location establishing this log contract",
+    "residual_tolerance": 1e-10,
+    "expected_residual_count": 12,
+    "timeout_seconds": 86400
+  }
+}

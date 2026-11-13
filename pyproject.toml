@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lqcd-analysis"
+version = "0.1.0"
+description = "Convention-explicit lattice QCD correlator generation and SQLite analysis"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24", "scipy>=1.10"]
+license = {file = "LICENSE"}
+readme = "README.md"
+
+[project.scripts]
+lqcd-analysis = "lqcd_analysis.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["lqcd_analysis*"]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
