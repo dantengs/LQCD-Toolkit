@@ -4,6 +4,12 @@
 
 [中文介绍](README.zh-CN.md) · [User guide](docs/USER_GUIDE.md) · [Physics conventions](docs/PHYSICS_CONVENTIONS.md) · [Scientific validation](docs/SCIENTIFIC_VALIDATION.md)
 
+Optional [scientific plotting](docs/plotting.md): install `pip install -e '.[plot]'`
+for effective energy/mass, correlator and fixed-fit residuals, form factors and
+supplied z-expansion bands. The Python/JSON interface exports PDF/SVG/PNG with
+explicit uncertainty labels and hash-based provenance; analysis alone does not
+require matplotlib.
+
 LQCD Toolkit connects a physical configuration to a complete, traceable calculation: construct sources, solve propagators through an explicitly selected backend, construct and solve sequential sources, contract two- and three-point functions, write the newly generated correlators directly into SQLite, and optionally fit selected channels. Generated selection manifests carry the measurement identities needed for analysis; users do not need to assemble database file IDs by hand.
 
 This repository contains only the new general-purpose implementation, tests, synthetic fixtures, and configuration templates. Historical source archives and the original repository history remain private and are not distributed here.
