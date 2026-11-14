@@ -409,6 +409,9 @@ class _PickleInterpreter:
             _require(self.raw_bytes <= self.limits.max_payload_bytes, "decoded bytes budget")
             return args[0].encode("latin1")
         if symbol.name == "dtype":
+            if (len(args) == 3 and type(args[1]) is int and
+                    type(args[2]) is int and args[1:] == (0, 1)):
+                args = (args[0], False, True)
             _require(len(args) == 3 and args[1] is False and args[2] is True, "unsupported dtype arguments")
             return _Dtype(_dtype(args[0]))
         if symbol.name == "reconstruct":
@@ -437,6 +440,8 @@ class _PickleInterpreter:
             target.value = target.value.newbyteorder(endian)
             target.built = True
         elif type(target) is _Array:
+            if len(state) == 5 and type(state[3]) is int and state[3] in (0, 1):
+                state = state[:3] + (bool(state[3]),) + state[4:]
             _require(target.value is None and len(state) == 5 and
                      type(state[0]) is int and state[0] == 1 and type(state[3]) is bool,
                      "unsupported ndarray BUILD/rebuild")

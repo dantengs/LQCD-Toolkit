@@ -4,6 +4,11 @@
 
 [English](README.md) · [使用指南](docs/USER_GUIDE.zh-CN.md) · [物理约定](docs/PHYSICS_CONVENTIONS.zh-CN.md) · [科学验证范围](docs/SCIENTIFIC_VALIDATION.md)
 
+可选[科研绘图模块](docs/plotting.zh-CN.md)：`pip install -e '.[plot]'`，支持有效能量/质量、
+关联函数及固定拟合参考残差、形状因子与外部给定的 z 展开区间。
+Python/JSON 接口导出 PDF/SVG/PNG，明确误差种类并附数组哈希来源记录；
+仅分析时不需要 matplotlib。
+
 LQCD Toolkit 将一份物理配置连接到可追溯的计算流程：生成源，通过明确指定的后端求解传播子，构造并求解顺序源，收缩二点与三点函数，将自产关联函数直接写入 SQLite，并按需执行拟合。生成器同时输出带测量身份的 selection sidecar，用户无需手工收集数据库文件 ID。
 
 本仓库仅包含新通用实现、测试、合成样例和配置模板。旧源码归档与原仓库历史均保留在私人存储中，不随本仓库发布。
